@@ -145,7 +145,12 @@ nav.top .cta{min-height:40px;padding:8px 16px;font-size:13px;border-radius:10px}
 .marq{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:44px;padding:16px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .marq .lbl{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:0 0 10px var(--pad)}
 .marq .track{display:flex;gap:44px;white-space:nowrap;animation:marq 80s linear infinite;will-change:transform;font-family:var(--serif);font-size:clamp(22px,3.4vw,34px);font-style:italic}
-@media(max-width:899px){.marq .track{animation-duration:165s;gap:34px}}
+@media(max-width:899px){
+ .marq{mask-image:none;-webkit-mask-image:none;padding:18px 0}
+ .marq .track{animation:none;will-change:auto;transform:none;flex-wrap:wrap;white-space:normal;gap:10px 16px;padding:0 var(--pad);font-size:19px;line-height:1.35}
+ .marq .track span:nth-child(n+13){display:none}
+ .marq .track span::after{margin-left:16px}
+}
 .marq .track span::after{content:"·";color:var(--ember);margin-left:44px}
 @keyframes marq{to{transform:translateX(-50%)}}
 .two{display:grid;gap:40px}
